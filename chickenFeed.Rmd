@@ -1,7 +1,7 @@
 ---
 title: "Chicken Feed"
 author: "Jennifer Dimmett"
-date: "3/03/2020"
+date: "04/09/2020"
 output: html_document
 ---
 
@@ -37,35 +37,35 @@ attach(chickenData)
 
 <!-- plot chicken weight against each of the three explanatory variables.  Weight against a categorial varable is a boxplot, weight against a numerical variable is a scatter plot !-->
 
-boxplot of weight based on feed 
+Boxplot of weight based on feed 
 
 ```{r}
-plot(weight~feed,data=chickenData)
+plot(weight~feed,data=chickenData, main = "Chicken Weight vs Feed")
 ```
   
   It appears that the feed type has an effect.  Sunflower the best?
   
+  
+### Numerical summary  
 ```{r}
-  plot(weight~speed,data=chickenData)
+  plot(weight~speed,data=chickenData, main = "Chicken Weight vs Speed")
 ``` 
-  There does not appear to be any relation between speed and weight
+ 
+ 
+  There does not appear to be any relation between speed and weight.
 
-### Numerical summary
-
-```{r}
-summary(chickenData)
-```
-
-### Inference -- Analysis of Variancegi
+### Inference -- Analysis of Variance
 
 ```{r}
 model1 = lm(weight~feed+speed+sex, data=chickenData)
 anova(model1)
 ```
 
-###  Conclusions  -- which variables affect chicken weight?
-The sex and what you feed the chicken
 
+
+###  Conclusions  -- which variables affect chicken weight?
+The variables that affect weight are sex and feed.
+P> 0.05 so hypothesis is accepted. 
 
 
 
