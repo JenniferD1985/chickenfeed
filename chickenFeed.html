@@ -372,11 +372,18 @@ summary {
 
 <div id="chicken-feed-study" class="section level2">
 <h2>Chicken feed study</h2>
-<p>data set has chicken weights and 4 variables: 1. chicken weight<br />
-2. chicken feed type<br />
-3. chicken time in the 40&quot; run<br />
-4. chicken sex</p>
-<p>Idea is to determine which of the variables affect chicken weight The weight and time to run are numerical variables, gender and feed type are categorical variables</p>
+<p>data set has chicken weights and 4 variables:</p>
+<ol style="list-style-type: decimal">
+<li>chicken weight<br />
+</li>
+<li>chicken feed type<br />
+</li>
+<li>chicken time in the 40&quot; run<br />
+</li>
+<li>chicken sex</li>
+</ol>
+<p>Idea is to determine which of the variables affect chicken weight</p>
+<p>The weight and time to run are numerical variables, gender and feed type are categorical variables</p>
 <p>So we’ll use templatesRMD Cat Numerical, look for the section that has an ‘aov’</p>
 <!-- This question is like a bunch of t-tests, but instead of doing the t-test a bunch of times we use ANOVA to do all the comparisons at once!  !-->
 <div id="get-the-data" class="section level3">
@@ -423,7 +430,8 @@ anova(model1)</code></pre>
 </div>
 <div id="conclusions-which-variables-affect-chicken-weight" class="section level3">
 <h3>Conclusions – which variables affect chicken weight?</h3>
-<p>The variables that affect weight are sex and feed. P&gt; 0.05 so hypothesis is accepted.</p>
+<p>No variables affect chicken weight.</p>
+<p>Null hypothesis rejected.</p>
 </div>
 </div>
 

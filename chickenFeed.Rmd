@@ -13,12 +13,14 @@ knitr::opts_chunk$set(echo = TRUE)
 ##  Chicken feed study  
 
 data set has chicken weights and 4 variables:
+  
   1.  chicken weight  
   2.  chicken feed type  
   3.  chicken time in the 40" run  
   4.  chicken sex   
 
 Idea is to determine which of the variables affect chicken weight 
+
 The weight and time to run are numerical variables, gender and feed type are categorical variables
 
 So we'll use templatesRMD Cat Numerical, look for the section that has an 'aov'
@@ -64,8 +66,10 @@ anova(model1)
 
 
 ###  Conclusions  -- which variables affect chicken weight?
-The variables that affect weight are sex and feed.
-P> 0.05 so hypothesis is accepted. 
+No variables affect chicken weight.
+
+Null hypothesis rejected.
+
 
 
 
