@@ -48,13 +48,21 @@ plot(weight~feed,data=chickenData, main = "Chicken Weight vs Feed")
   It appears that the feed type has an effect.  Sunflower the best?
   
   
-### Numerical summary  
+
 ```{r}
   plot(weight~speed,data=chickenData, main = "Chicken Weight vs Speed")
 ``` 
+
+There does not appear to be any relation between speed and weight.
+
+### Numerical summary  
+
+```{r}
+summary(chickenData)
+```
+This is a summary of all the data in chickenData
  
- 
-  There does not appear to be any relation between speed and weight.
+
 
 ### Inference -- Analysis of Variance
 
@@ -63,12 +71,13 @@ model1 = lm(weight~feed+speed+sex, data=chickenData)
 anova(model1)
 ```
 
-
+This ANOVA says only feed affects chicken weight
 
 ###  Conclusions  -- which variables affect chicken weight?
-No variables affect chicken weight.
 
-Null hypothesis rejected.
+$H_O$: Does feed affect chicken weight.
+
+P-Value > 0.05 One does not accept null hypothesis
 
 
 
